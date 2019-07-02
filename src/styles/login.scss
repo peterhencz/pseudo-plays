@@ -25,6 +25,8 @@
   font-family: "DM Sans", sans-serif;
   background: #c7cdd1;
   box-shadow: 0 5px 10px rgb(134, 133, 133);
+  transition: 0.2s;
+  transition-timing-function: cubic-bezier(0.41, 0.24, 0.96, 0.83);
 }
 
 @mixin login-button-pseudo {
@@ -70,6 +72,8 @@
 .login-button-enable:before,
 .login-button-enable:after {
   @include login-button-pseudo();
+  transition: 0.2s;
+  transition-timing-function: cubic-bezier(0.41, 0.24, 0.96, 0.83);
 }
 
 .login-button:before,
