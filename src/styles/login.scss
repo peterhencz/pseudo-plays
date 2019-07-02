@@ -14,8 +14,7 @@
   background: transparent;
 }
 
-.login-button,
-.login-button-enable {
+@mixin login-button {
   position: relative;
   width: 320px;
   border-radius: 4px;
@@ -25,12 +24,10 @@
   height: 108px;
   font-family: "DM Sans", sans-serif;
   background: #c7cdd1;
+  box-shadow: 0 5px 10px rgb(134, 133, 133);
 }
 
-.login-button:before,
-.login-button:after,
-.login-button-enable:before,
-.login-button-enable:after {
+@mixin login-button-pseudo {
   height: 100%;
   top: 0;
   right: 0;
@@ -40,22 +37,6 @@
   text-align: center;
   transition: 0.2s;
   transition-timing-function: cubic-bezier(0.41, 0.24, 0.96, 0.83);
-}
-
-.login-button:before {
-  content: "yolo";
-  font-size: 28px;
-  border-radius: 4px 0 0 4px;
-  width: 216px;
-  color: #fff;
-  background: #c7cdd1;
-  left: 0;
-}
-
-.login-button:hover.login-button:before {
-  background: #c7cdd1;
-  width: 182px;
-  opacity: 0;
 }
 
 @mixin login-lock($icon) {
@@ -68,6 +49,47 @@
   right: 0;
 }
 
+@mixin login-status($icon, $bg-color, $cursor) {
+  width: 320px;
+  content: $icon;
+  border-radius: 4px;
+  font-size: 48px;
+  background: $bg-color;
+  cursor: $cursor;
+  animation: pop 0.2s;
+  animation-direction: alternate;
+}
+
+.login-button,
+.login-button-enable {
+  @include login-button();
+}
+
+.login-button:before,
+.login-button:after,
+.login-button-enable:before,
+.login-button-enable:after {
+  @include login-button-pseudo();
+}
+
+.login-button:before,
+.login-button-enable:before {
+  content: "yolo";
+  font-size: 28px;
+  border-radius: 4px 0 0 4px;
+  width: 216px;
+  color: #fff;
+  background: #c7cdd1;
+  left: 0;
+}
+
+.login-button:hover.login-button:before,
+.login-button-enable:hover.login-button-enable:before {
+  background: #c7cdd1;
+  width: 182px;
+  opacity: 0;
+}
+
 .login-button:after {
   @include login-lock("lock");
 }
@@ -77,14 +99,11 @@
 }
 
 .login-button:hover.login-button:after {
-  width: 320px;
-  content: "highlight_off";
-  border-radius: 4px;
-  font-size: 48px;
-  background: #dd4e4e;
-  cursor: not-allowed;
-  animation: pop 0.2s;
-  animation-direction: alternate;
+  @include login-status("highlight_off", #dd4e4e, not-allowed);
+}
+
+.login-button-enable:hover.login-button-enable:after {
+  @include login-status("done", #4c8bca, pointer);
 }
 
 .login-button:active.login-button:after,
@@ -93,6 +112,7 @@
   background: #c7cdd1;
   color: #dd4e4e;
   font-size: 60px;
+  box-shadow: 0 20px 100px rgb(212, 87, 87);
 }
 
 @keyframes pop {

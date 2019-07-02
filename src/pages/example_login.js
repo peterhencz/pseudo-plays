@@ -26,18 +26,8 @@ class Login extends Component {
   };
 
   render() {
-    const { name, pass, passIsValid } = this.state;
+    const { passIsValid } = this.state;
     const buttonClass = passIsValid ? "login-button-enable" : "login-button";
-    console.log(
-      "name: ",
-      name,
-      "pass: ",
-      pass,
-      "passIsValid: ",
-      passIsValid,
-      "button:",
-      buttonClass
-    );
 
     return (
       <div>
@@ -56,7 +46,9 @@ class Login extends Component {
             className="input"
             onChange={this.passValidation}
           />
-          <div className={buttonClass} disabled={!passIsValid} />
+          <button disabled={!passIsValid} onClick={() => alert("cica")}>
+            <div className={buttonClass} />
+          </button>
         </div>
       </div>
     );
