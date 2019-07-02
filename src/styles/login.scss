@@ -14,7 +14,8 @@
   background: transparent;
 }
 
-@mixin login-button() {
+.login-button,
+.login-button-enable {
   position: relative;
   width: 320px;
   border-radius: 4px;
@@ -26,15 +27,10 @@
   background: #c7cdd1;
 }
 
-.login-button {
-  @include login-button();
-}
-
-.login-button-enabled {
-}
-
 .login-button:before,
-.login-button:after {
+.login-button:after,
+.login-button-enable:before,
+.login-button-enable:after {
   height: 100%;
   top: 0;
   right: 0;
@@ -62,17 +58,22 @@
   opacity: 0;
 }
 
-.login-button:after {
+@mixin login-lock($icon) {
   font-family: "Material Icons";
-  content: "lock";
+  content: $icon;
   font-size: 32px;
   border-radius: 0 4px 4px 0;
   width: 108px;
   background: #0fae98;
   right: 0;
-  &.enable {
-    content: "lock-open";
-  }
+}
+
+.login-button:after {
+  @include login-lock("lock");
+}
+
+.login-button-enable:after {
+  @include login-lock("lock_open");
 }
 
 .login-button:hover.login-button:after {

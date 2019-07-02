@@ -27,7 +27,7 @@ class Login extends Component {
 
   render() {
     const { name, pass, passIsValid } = this.state;
-    const buttonClass = passIsValid ? "login-button enable" : "login-button";
+    const buttonClass = passIsValid ? "login-button-enable" : "login-button";
     console.log(
       "name: ",
       name,
