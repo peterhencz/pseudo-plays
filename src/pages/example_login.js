@@ -46,7 +46,7 @@ class Login extends Component {
             className="input"
             onChange={this.passValidation}
           />
-          <button disabled={!passIsValid} onClick={() => alert("cica")}>
+          <button disabled={!passIsValid} onClick={() => alert("🐈")}>
             <div className={buttonClass} />
           </button>
         </div>
