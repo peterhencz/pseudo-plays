@@ -5,6 +5,7 @@ class Login extends Component {
     name: "",
     pass: "",
     passIsValid: false,
+    cica: false,
   };
 
   passValidation = event => {
@@ -30,9 +31,9 @@ class Login extends Component {
     const buttonClass = passIsValid ? "login-button-enable" : "login-button";
 
     return (
-      <div>
-        <h2>kiscica</h2>
+      <div className="login-screen">
         <div className="input-form">
+          {this.state.cica && <div>cica</div>}
           <p>name</p>
           <input
             name="name"

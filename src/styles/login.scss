@@ -1,13 +1,27 @@
-.input-form {
-  padding: 0.3em;
+.login-screen {
   display: grid;
-  width: auto;
-  grid-template-columns: 5em 10em;
-  grid-column-gap: 0em;
-  grid-row-gap: 2em;
+  place-items: center;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    180deg,
+    rgb(132, 164, 189),
+    rgb(206, 223, 233)
+  );
+  background: linear-gradient(180deg, rgb(132, 164, 189), rgb(206, 223, 233));
+}
+
+.input-form {
+  background-color: #eeeeee65;
+  padding: 2% 0.3em;
+  display: grid;
+  justify-content: center;
+  width: 22em;
+  height: 30em;
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .input {
+  height: 2em;
   border: none;
   border-bottom: 1px solid tomato;
   outline: none;
@@ -16,12 +30,12 @@
 
 @mixin login-button {
   position: relative;
-  width: 320px;
+  width: 220px;
   border-radius: 4px;
   color: #ffffff;
   outline: none;
   letter-spacing: 0.5px;
-  height: 108px;
+  height: 68px;
   font-family: "DM Sans", sans-serif;
   background: #c7cdd1;
   box-shadow: 0 5px 10px rgb(134, 133, 133);
@@ -30,11 +44,11 @@
 }
 
 @mixin login-button-pseudo {
-  height: 100%;
+  height: 68px;
   top: 0;
   right: 0;
   position: absolute;
-  line-height: 108px;
+  line-height: 68px;
   vertical-align: middle;
   text-align: center;
   transition: 0.2s;
@@ -52,7 +66,7 @@
 }
 
 @mixin login-status($icon, $bg-color, $cursor) {
-  width: 320px;
+  width: 220px;
   content: $icon;
   border-radius: 4px;
   font-size: 48px;
@@ -81,7 +95,7 @@
   content: "yolo";
   font-size: 28px;
   border-radius: 4px 0 0 4px;
-  width: 216px;
+  width: 116px;
   color: #fff;
   background: #c7cdd1;
   left: 0;
