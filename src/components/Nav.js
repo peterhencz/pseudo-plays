@@ -8,7 +8,10 @@ class Nav extends Component {
         <NavLink to="/">
           <p className="nav-links">🤘</p>
         </NavLink>
-        <NavLink to="/balls">
+        <NavLink to="/anim_opt">
+          <p className="nav-links">Animation Opt</p>
+        </NavLink>
+        <NavLink to="/scss_rf">
           <p className="nav-links">SCSS Refact</p>
         </NavLink>
         <NavLink to="/example_login">

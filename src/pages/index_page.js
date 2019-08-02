@@ -10,7 +10,7 @@ class Index extends Component {
             <br />
             <br />
             <h2>&&</h2>
-            <br />
+
             <h2>SCSS Refact</h2>
             <h2>Pseudo-elements tips</h2>
             <br />

@@ -35,11 +35,20 @@ class Login extends Component {
         <div className="login-container">
           <div className="login-info">
             <h1>Ez egy ilyen</h1>
-            <h2>bejelentkezős képernyő</h2>
             <br />
             <br />
-
-            <h2>🐱</h2>
+            <br />
+            <h2>
+              bejelentkezos kepernyo, 1 dives enable-disable button-nel, ami
+              igazabol ketto, de ez most tokmindegy
+            </h2>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h3>Hint: peterhencz/kiscica</h3>
           </div>
           <div className="login-screen">
             <div className="input-form">

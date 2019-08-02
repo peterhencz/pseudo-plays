@@ -1,15 +1,18 @@
 * {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   text-decoration: none;
   font-size: 16px;
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   height: auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #edeeef;
+  text-align: justify;
 }
 
 html {
@@ -26,18 +29,34 @@ button {
 }
 
 h1 {
+  display: inline-block;
+  font-family: "Playfair Display", serif;
   font-weight: 300;
-  border-top: 9px solid #666;
+  border-top: 9px solid #333;
   font-size: 3em;
+  color: #333;
 }
 
 h2 {
+  display: inline-block;
   font-weight: 300;
   font-size: 1.5em;
+  color: #666;
 }
 
 .index {
   display: grid;
   place-items: center;
   height: 100%;
+}
+
+.srf_container {
+  padding: 3em 10em;
+  position: relative;
+  top: -2em;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 28em;
+  width: 30em;
+  height: 30em;
 }

@@ -32,6 +32,7 @@
 .login-info {
   padding-top: 13em;
   padding-left: 10em;
+  padding-right: 71%;
   width: 100%;
   background-color: white;
 }
@@ -57,9 +58,13 @@
   padding: 1em 0;
 }
 
+.input-container p {
+  font-size: 1em;
+}
+
 .input {
   padding: 0.5em;
-  font-size: 0.75em;
+  font-size: 1em;
   font-weight: 300;
   font-style: italic;
   width: 14em;
@@ -86,7 +91,7 @@
   outline: none;
   letter-spacing: 0.5px;
   height: 48px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 0.8em;
   background: #c7cdd1;
   box-shadow: 0 2px 4px rgba(134, 133, 133, 0.267);
@@ -144,7 +149,7 @@
 .login-button:before,
 .login-button-enable:before {
   content: "yolo";
-  font-size: 1.25em;
+  font-size: 1.5em;
   border-radius: 4px 0 0 4px;
   width: 132px;
   color: #fff;
@@ -168,7 +173,7 @@
 }
 
 .login-button:hover.login-button:after {
-  @include login-status("highlight_off", #dd4e4e, not-allowed);
+  @include login-status("highlight_off", #e85b41, not-allowed);
 }
 
 .login-button-enable:hover.login-button-enable:after {
@@ -179,9 +184,9 @@
 .login-button:active.login-button:before {
   transition: 0.1s;
   background: #cedfe9;
-  color: #dd4e4e;
+  color: #e85b41;
   font-size: 2.5em;
-  box-shadow: 0 0px 40px rgb(218, 133, 133);
+  box-shadow: 0 0px 40px #e85b41;
 }
 
 @keyframes pop {
