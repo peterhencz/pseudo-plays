@@ -33,22 +33,39 @@
 
 .input-form {
   background-color: #fff;
-  padding: 2% 0.3em;
+  padding: 3em 3em 5em 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 22em;
-  height: 30em;
+  width: 20em;
+  height: 24em;
   transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.input-container {
+  padding: 1em 0;
+}
+
 .input {
+  padding: 0.5em;
+  font-size: 0.75em;
+  font-weight: 300;
+  font-style: italic;
+  width: 14em;
   height: 2em;
   border: none;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #666;
   outline: none;
   background: transparent;
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  &:hover {
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.input-container p {
+  padding: 0.5em 0;
 }
 
 @mixin login-button {
@@ -85,7 +102,7 @@
   font-size: 1.5em;
   border-radius: 0 4px 4px 0;
   width: 88px;
-  background: #b5c4d8;
+  background: #84a4bd;
   right: 0;
 }
 
@@ -121,7 +138,7 @@
   border-radius: 4px 0 0 4px;
   width: 132px;
   color: #fff;
-  background: #b0d2e9;
+  background: #cedfe9;
   left: 0;
 }
 

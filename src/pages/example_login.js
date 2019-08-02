@@ -40,19 +40,24 @@ class Login extends Component {
           <div className="input-form">
             <div className="inputs">
               {this.state.cica && <div>cica</div>}
-              <p>name</p>
-              <input
-                name="name"
-                className="input"
-                onChange={this.handleInputChange}
-              />
-              <p>pass</p>
-              <input
-                name="pass"
-                type="password"
-                className="input"
-                onChange={this.passValidation}
-              />
+
+              <div className="input-container">
+                <p>Name</p>
+                <input
+                  name="name"
+                  className="input"
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              <div className="input-container">
+                <p>Password</p>
+                <input
+                  name="pass"
+                  type="password"
+                  className="input"
+                  onChange={this.passValidation}
+                />
+              </div>
             </div>
             <button disabled={!passIsValid} onClick={() => alert("🐈")}>
               <div className={buttonClass} />
