@@ -31,37 +31,43 @@ class Login extends Component {
     const buttonClass = passIsValid ? "login-button-enable" : "login-button";
 
     return (
-      <div className="login-container">
-        <div className="login-info">
-          <h1>Ez egy ilyen</h1>
-          <h2>bejelentkezős képernyő</h2>
-        </div>
-        <div className="login-screen">
-          <div className="input-form">
-            <div className="inputs">
-              {this.state.cica && <div>cica</div>}
+      <div className="border-bg">
+        <div className="login-container">
+          <div className="login-info">
+            <h1>Ez egy ilyen</h1>
+            <h2>bejelentkezős képernyő</h2>
+            <br />
+            <br />
 
-              <div className="input-container">
-                <p>Name</p>
-                <input
-                  name="name"
-                  className="input"
-                  onChange={this.handleInputChange}
-                />
+            <h2>🐱</h2>
+          </div>
+          <div className="login-screen">
+            <div className="input-form">
+              <div className="inputs">
+                {this.state.cica && <div>cica</div>}
+
+                <div className="input-container">
+                  <p>Name</p>
+                  <input
+                    name="name"
+                    className="input"
+                    onChange={this.handleInputChange}
+                  />
+                </div>
+                <div className="input-container">
+                  <p>Password</p>
+                  <input
+                    name="pass"
+                    type="password"
+                    className="input"
+                    onChange={this.passValidation}
+                  />
+                </div>
               </div>
-              <div className="input-container">
-                <p>Password</p>
-                <input
-                  name="pass"
-                  type="password"
-                  className="input"
-                  onChange={this.passValidation}
-                />
-              </div>
+              <button disabled={!passIsValid} onClick={() => alert("🐈")}>
+                <div className={buttonClass} />
+              </button>
             </div>
-            <button disabled={!passIsValid} onClick={() => alert("🐈")}>
-              <div className={buttonClass} />
-            </button>
           </div>
         </div>
       </div>
