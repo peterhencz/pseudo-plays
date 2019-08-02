@@ -1,4 +1,13 @@
+.login-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  border: 1px solid tomato;
+}
+
 .login-screen {
+  width: 60%;
   display: grid;
   place-items: center;
   height: 100%;
@@ -10,11 +19,25 @@
   background: linear-gradient(180deg, rgb(132, 164, 189), rgb(206, 223, 233));
 }
 
+.login-info {
+  padding-top: 13em;
+  padding-left: 10em;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+
+.login-info h1 {
+  border: none;
+}
+
 .input-form {
-  background-color: #eeeeee65;
+  background-color: #fff;
   padding: 2% 0.3em;
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   width: 22em;
   height: 30em;
   transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
@@ -23,7 +46,7 @@
 .input {
   height: 2em;
   border: none;
-  border-bottom: 1px solid tomato;
+  border-bottom: 1px solid #333;
   outline: none;
   background: transparent;
 }
@@ -35,20 +58,21 @@
   color: #ffffff;
   outline: none;
   letter-spacing: 0.5px;
-  height: 68px;
-  font-family: "DM Sans", sans-serif;
+  height: 48px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8em;
   background: #c7cdd1;
-  box-shadow: 0 5px 10px rgb(134, 133, 133);
+  box-shadow: 0 2px 4px rgba(134, 133, 133, 0.267);
   transition: 0.2s;
   transition-timing-function: cubic-bezier(0.41, 0.24, 0.96, 0.83);
 }
 
 @mixin login-button-pseudo {
-  height: 68px;
+  height: 48px;
   top: 0;
   right: 0;
   position: absolute;
-  line-height: 68px;
+  line-height: 48px;
   vertical-align: middle;
   text-align: center;
   transition: 0.2s;
@@ -58,10 +82,10 @@
 @mixin login-lock($icon) {
   font-family: "Material Icons";
   content: $icon;
-  font-size: 32px;
+  font-size: 1.5em;
   border-radius: 0 4px 4px 0;
-  width: 108px;
-  background: #0fae98;
+  width: 88px;
+  background: #b5c4d8;
   right: 0;
 }
 
@@ -69,7 +93,7 @@
   width: 220px;
   content: $icon;
   border-radius: 4px;
-  font-size: 48px;
+  font-size: 2em;
   background: $bg-color;
   cursor: $cursor;
   animation: pop 0.2s;
@@ -93,11 +117,11 @@
 .login-button:before,
 .login-button-enable:before {
   content: "yolo";
-  font-size: 28px;
+  font-size: 1.25em;
   border-radius: 4px 0 0 4px;
-  width: 116px;
+  width: 132px;
   color: #fff;
-  background: #c7cdd1;
+  background: #b0d2e9;
   left: 0;
 }
 
@@ -129,8 +153,8 @@
   transition: 0.1s;
   background: #c7cdd1;
   color: #dd4e4e;
-  font-size: 60px;
-  box-shadow: 0 20px 100px rgb(212, 87, 87);
+  font-size: 3em;
+  box-shadow: 0 10px 100px rgb(212, 87, 87);
 }
 
 @keyframes pop {

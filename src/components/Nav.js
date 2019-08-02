@@ -6,13 +6,16 @@ class Nav extends Component {
     return (
       <div className="nav-container">
         <NavLink to="/">
-          <p className="nav-links">🙃</p>
+          <p className="nav-links">🤘</p>
+        </NavLink>
+        <NavLink to="/balls">
+          <p className="nav-links">SCSS Refact</p>
         </NavLink>
         <NavLink to="/example_login">
-          <p className="nav-links">login</p>
+          <p className="nav-links">Login</p>
         </NavLink>
         <NavLink to="/example_shadow">
-          <p className="nav-links">shadow</p>
+          <p className="nav-links">Shadow</p>
         </NavLink>
       </div>
     );

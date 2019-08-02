@@ -31,25 +31,33 @@ class Login extends Component {
     const buttonClass = passIsValid ? "login-button-enable" : "login-button";
 
     return (
-      <div className="login-screen">
-        <div className="input-form">
-          {this.state.cica && <div>cica</div>}
-          <p>name</p>
-          <input
-            name="name"
-            className="input"
-            onChange={this.handleInputChange}
-          />
-          <p>pass</p>
-          <input
-            name="pass"
-            type="password"
-            className="input"
-            onChange={this.passValidation}
-          />
-          <button disabled={!passIsValid} onClick={() => alert("🐈")}>
-            <div className={buttonClass} />
-          </button>
+      <div className="login-container">
+        <div className="login-info">
+          <h1>Ez egy ilyen</h1>
+          <h2>bejelentkezős képernyő</h2>
+        </div>
+        <div className="login-screen">
+          <div className="input-form">
+            <div className="inputs">
+              {this.state.cica && <div>cica</div>}
+              <p>name</p>
+              <input
+                name="name"
+                className="input"
+                onChange={this.handleInputChange}
+              />
+              <p>pass</p>
+              <input
+                name="pass"
+                type="password"
+                className="input"
+                onChange={this.passValidation}
+              />
+            </div>
+            <button disabled={!passIsValid} onClick={() => alert("🐈")}>
+              <div className={buttonClass} />
+            </button>
+          </div>
         </div>
       </div>
     );
