@@ -1,3 +1,3 @@
 ## PSEUDO PLAYS 🏖️
 
-practice project with the almighty css pseduo elements
+practice project with css pseduo elements
