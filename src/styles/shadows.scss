@@ -1,0 +1,43 @@
+.shadow_exm h3 {
+  text-align: center;
+  position: relative;
+  top: 80px;
+}
+
+.shadow_exm {
+  width: 30em;
+  height: 15em;
+  background: #fff;
+  margin: 40px auto;
+  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.fx {
+  position: relative;
+}
+
+.fx:before,
+.fx:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 1em;
+  width: 14em;
+  top: 90%;
+  box-shadow: 0 15px 10px rgba(134, 133, 133, 0.967);
+  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.fx:after {
+  right: 1em;
+  left: auto;
+}
+
+.fx:hover.fx:before {
+  transform: rotate(-5deg);
+}
+
+.fx:hover.fx:after {
+  transform: rotate(5deg);
+}

@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
-import Nav from "./components/Nav";
 import Main from "./components/Main";
 import Index from "./pages/index_page";
 import AnimOpt from "./pages/anim_opt";

@@ -3,7 +3,13 @@
   display: grid;
   place-items: center center;
   height: 100vh;
-  background: linear-gradient(190deg, #fdfcfb, #aab6ce);
+  background: linear-gradient(
+    to right,
+    #fff 0%,
+    #fff 25%,
+    #f0f0f0 25%,
+    rgba(170, 182, 206, 1) 100%
+  );
 }
 
 .info {

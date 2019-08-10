@@ -39,9 +39,20 @@ class Login extends Component {
             <br />
             <br />
             <h2>
-              bejelentkezos kepernyo, 1 dives enable-disable button-nel, ami
-              igazabol ketto, de ez most tokmindegy
+              bejelentkezos login kepernyo, 1 dives enable && disable
+              button-nel, ami igazabol ketto, de ez most tokmindegy. Nem enged
+              be a rendszerbe, de nem basztatja elore a felhasznalot, hogy
+              hulye.
             </h2>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <br />
             <br />
             <br />
